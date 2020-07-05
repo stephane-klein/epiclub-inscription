@@ -271,6 +271,16 @@ function IndexPage() {
 
         <Heading as="h2" size="md">Montant de la cotisation</Heading>
 
+        <Text>Total : 260 €</Text>
+
+        <FormControl>
+          <FormLabel htmlFor="rue">Mode de paiement ?</FormLabel>
+          <RadioGroup>
+            <Radio value="carteBancaire">Carte bancaire</Radio>
+            <Radio value="cheque">Chèque</Radio>
+          </RadioGroup>
+        </FormControl>
+
         <Divider borderColor="gray.400" />
 
         <Button>Valider mon inscription</Button>
