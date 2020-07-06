@@ -1,0 +1,6 @@
+ignores: [
+    "babel-*",
+    "stylelint-*",
+    "gatsby-plugin-chakra-ui"
+]
+skip-missing: true

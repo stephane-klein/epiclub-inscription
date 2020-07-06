@@ -6,21 +6,15 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@chakra-ui/core": "0.8.0",
-    "@stripe/react-stripe-js": "^1.1.2",
-    "@stripe/stripe-js": "^1.7.0",
     "@emotion/core": "10.0.28",
     "@emotion/styled": "10.0.27",
+    "@stripe/react-stripe-js": "^1.1.2",
+    "@stripe/stripe-js": "^1.7.0",
+    "depcheck": "^1.0.0",
     "emotion-theming": "10.0.27",
     "gatsby": "2.23.12",
-    "gatsby-image": "2.4.9",
     "gatsby-plugin-chakra-ui": "0.1.4",
-    "gatsby-plugin-manifest": "2.4.14",
-    "gatsby-plugin-offline": "3.2.13",
     "gatsby-plugin-react-helmet": "3.3.6",
-    "gatsby-plugin-sharp": "2.6.14",
-    "gatsby-source-filesystem": "2.3.14",
-    "gatsby-transformer-sharp": "2.5.7",
-    "prop-types": "15.7.2",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-helmet": "6.1.0",
@@ -33,7 +27,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint": "eslint --fix .",
-    "lint:css": "stylelint './**/*.js'"
+    "lint:css": "stylelint './**/*.js'",
+    "lint:depcheck": "depcheck"
   },
   "eslintConfig": {
     "extends": "react-app"
