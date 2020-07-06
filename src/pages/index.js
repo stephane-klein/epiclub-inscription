@@ -10,8 +10,6 @@ import {
   ListItem,
   FormControl,
   FormLabel,
-  FormErrorMessage,
-  FormHelperText,
   Input,
   Radio,
   RadioGroup,
@@ -19,8 +17,12 @@ import {
   Button
 } from "@chakra-ui/core";
 import InputMask from "react-input-mask";
+import { loadStripe } from '@stripe/stripe-js';
+import { CardElement, Elements } from "@stripe/react-stripe-js";
 
 function IndexPage() {
+  const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+
   return (
     <Box mx="auto" maxW="48rem">
       <Stack p={4} spacing={4}>
@@ -156,7 +158,6 @@ function IndexPage() {
                 <th>Lieu / Salle</th>
                 <th>Jour</th>
                 <th>Horaire</th>
-                <th></th>
               </tr>
               <tr>
                 <td>Jeunes débutants / collégiens / lycéens</td>
@@ -281,6 +282,13 @@ function IndexPage() {
           </RadioGroup>
         </FormControl>
 
+        <FormControl>
+          <FormLabel htmlFor="carteBancaire">Carte bancaire</FormLabel>
+          <Elements stripe={stripePromise}>
+            <CardElement />
+          </Elements>
+        </FormControl>
+        
         <Divider borderColor="gray.400" />
 
         <Button>Valider mon inscription</Button>
